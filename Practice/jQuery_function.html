@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>jQuery Practice</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="js/jquery-3.2.1.js"> </script>
+
+      <style>
+        .pTest{
+          color: red;
+          font-size: 50px;
+        }
+
+        .red{
+          color: red;
+        }
+
+        .blue{
+          color: blue;
+        }
+
+        .green{
+          color: green;
+        }
+
+        .backgroundColor{
+          background: green;
+
+        }
+
+      </style>
+
+  </head>
+  <body BGCOLOR="WHITE">
+
+    <H1>A Simple Sample Web Page</H1>
+
+    <a href= "www.example.com"> Click Here </a> <br>
+    <input type='checkbox' id="checkbox"> <br>
+    <input type='radio' id="radio">
+
+    <H1><span class="red">This is a size "1" heading</span></H1>
+    <H2><span class="red">This is a size "2" heading</span></H2>
+    <H3><span class="red">This is a size "3" heading</span></H3>
+    <H4><span class="blue">This is a size "4" heading</span></H4>
+    <H5><span class="blue">This is a size "5" heading</span></H5>
+    <H6><span class="blue">This is a size "6" heading</span></H6>
+
+    <input type="text" id="acceptinput" value="Enter Input">
+    <p > This is 1st Demo Class. </p>
+    <p id="test" > This is 2nd Demo Class. </p>
+
+    <div class="pTest" id="pTest">
+      <span class="article"> This is One. <br></span>
+      <span class="b"> This is Two. <br></span>
+      <span class="c"> This is Three. <br></span>
+      <span class="d"> This is Four. <br></span>
+    </div>
+
+
+    <script>
+
+        //$('a[href ^= w]').css('color', 'red');
+        //$('a[href *= "www.example.com"]').css('color', 'red');
+        $('#pTest span[class~="article"]').css('color', 'blue');
+        $('#pTest span[class|="b"]').css('color', 'blue');
+
+        //alert($('.pTest').prop('class'));
+        //alert($('div span').prop('class'));
+        //alert($('#pTest span').prop('class'));
+
+        //$('#pTest span').prop('class', 'blue');
+
+        $('#pTest span').prop('class', function(index ,value){
+          //alert(index);
+          //alert(value);
+
+        });
+/*
+        $('#pTest span').prop('abc', 'This is abc property.')
+        alert($('#pTest span').prop('abc'));
+        $('#pTest span').removeProp('abc'); //*****
+        alert($('#pTest span').prop('abc'));
+*/
+        $('input[type=radio]').prop('disabled', 'true');
+
+        //$('input[type!=radio]').prop('disabled', 'true');
+
+
+
+
+        //alert('Script Connected');
+        //alert(jQuery);
+        //$("#acceptinput").val('Value has been changed.');
+/*
+        $('span').css('color', function(index, value){
+            alert(index);
+            alert(value);
+        });
+*/
+        //$('p').addClass('blue');
+
+        $('h6 span').removeClass('blue');
+
+        $('p').addClass(function(index, value){
+          //alert(index);
+          //console.log($('p')[index]);
+          return 'red';
+        });
+
+        $('h5 span').toggleClass('backgroundColor');
+        //alert($('h5 span').hasClass('backgroundColor'));
+        //alert($('h4 span').hasClass('backgroundColor'));
+
+        //alert($('h5 span').attr('class'));
+        //$('#checkbox').attr({'checked':'checked'});
+        $('h5 span').removeAttr('class');
+
+
+    </script>
+
+  </body>
+
+</html>

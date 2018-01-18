@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>jQuery Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.2.1.js"> </script>
+
+    <style>
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <button> Hide Text </button>
+    <p> Please click hide button to hide this text. </p>
+
+
+
+
+    <script>
+
+  /*    //with callback
+      $(document).ready(function(){
+
+        $("button").click(function(){
+          $("p").hide("slow", function(){
+            alert("Texts are hidden now..");
+          });
+        });
+
+      });*/
+
+      // without callback
+      $(document).ready(function(){
+
+        $("button").click(function(){
+          $("p").hide(1000);
+          alert("Texts are hidden now..");
+    
+        });
+
+      });
+
+    </script>
+
+  </body>
+
+</html>

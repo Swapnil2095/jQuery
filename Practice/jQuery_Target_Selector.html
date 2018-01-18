@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>jQuery Practice</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="js/jquery-3.2.1.js"> </script>
+
+      <style>
+
+        table{
+          border-collapse:collapse;
+          border: 2px solid black;
+        }
+
+        table td{
+          border:1px solid #FF0000;
+        }
+
+        table th{
+          border:1px solid #FF0000;
+        }
+
+        .pTest{
+          color: red;
+          font-size: 50px;
+        }
+
+        .red{
+          color: red;
+        }
+
+        .focusElement{
+          background-color: red;
+        }
+
+        .blue{
+          color: blue;
+        }
+
+        .green{
+          color: green;
+        }
+
+        .backgroundColor{
+          background: green;
+
+        }
+
+      </style>
+
+  </head>
+
+  <body>
+
+   <a href= "www.example.com"> Click Here </a> <br>
+   <input type='checkbox' id="checkbox" disabled> <br>
+   <input type='checkbox' id="checkbox"> <br>
+   <input type='checkbox' id="checkbox"> <br>
+   <input type='checkbox' id="checkbox"> <br>
+   <input type='radio' id="radio"><br>
+
+   <div id="headtag">
+     <H1><span>This is a size "1" heading</span></H1>
+     <p id="info"> My name is <span> Swapnil Gaikwad.</span> I am a computer science professional. </p>
+     <H2><span>This is a size "2" heading</span></H2>
+   </div>
+
+   <div>
+     <p id="info"> My name is Swapnil Gaikwad. I am a computer science professional. </p>
+     <span> IIT CHICAGO </span> <br>
+      <span> USA </span> <br>
+   </div>
+
+   <div class="pTest" id="pTest">
+     <span class="article"> This is One. <br></span>
+     <span class="b"> This is Two. <br></span>
+     <span class="c"> This is Three. <br></span>
+     <span class="d"> This is Four. <br></span>
+   </div>
+
+   <table>
+
+     <thead>
+     	 	<tr>
+    			<th>Name</th>
+    			<th>Age</th>
+    			<th>Breed</th>
+     		</tr>
+     </thead>
+
+     <tbody>
+
+     	<tr>
+     		<td>Rusty</td>
+     		<td>2</td>
+     		<td>Mutt</td>
+     	</tr>
+     	<tr>
+     		<td>Wyatt</td>
+     		<td>13</td>
+     		<td>Golden</td>
+     	</tr>
+
+      <tr>
+     		<td>Swapnil</td>
+     		<td></td>
+     		<td>Golden</td>
+     	</tr>
+
+     </tbody>
+
+   </table>
+
+   <div class="form" id="form">
+     man-news: <input id="man-news" name="man-news"><br><br>
+     milkman: <input name="milkman"><br><br>
+     new-letterman: <input id="letterman" name="new-letterman"><br><br>
+     newmilk: <input name="newmilk"><br><br>
+     <input id="targetButton" type="button" value="ClickMe">
+   </div>
+
+   <select id="box">
+	    <option>Option 1</option>
+	    <option>Option 2</option>
+	    <option>Option 3</option>
+      <option selected="selected">Forth Text</option>
+	</select>
+
+   <script>
+
+
+
+     //alert(jQuery);
+     //alert("Connected");
+     $(function(){
+       $("#targetButton").on("click", function(event){
+         //alert("Reached Here");
+         //$("td:eq(3)").css("backgroundColor", "yellow");
+         //$("td:eq(-2)").css("backgroundColor", "yellow");
+
+         //$("td:lt(2)").css("backgroundColor", "yellow");
+         //$("td:lt(-2)").css("backgroundColor", "yellow");
+
+         //$("td:even").css("backgroundColor", "yellow");
+         //$("td:odd").css("backgroundColor", "yellow");
+
+         //$("td:first").css("backgroundColor", "yellow");
+         //$("td:last").css("backgroundColor", "yellow");
+
+         //var currentEvent = $(this);
+         //currentEvent.toggleClass("focusElement", currentEvent.is(":focus"));
+
+         //$(":header").css("backgroundColor", "yellow");
+
+
+         //$("div span:first-child").css("backgroundColor", "yellow");
+         //$("div span:last-child").css("backgroundColor", "yellow");
+
+         //$("div span:first-of-type").css("backgroundColor", "yellow");
+         //$("div span:last-of-type").css("backgroundColor", "yellow");
+
+         //$("td:nth-child(2)").css("backgroundColor", "yellow");
+         //$("td:nth-child(odd)").css("backgroundColor", "yellow");
+
+         //$("td:nth-last-child(2)").css("backgroundColor", "yellow");
+         //$("td:nth-last-child(1)").css("backgroundColor", "yellow");
+
+         //$("div p:only-child").css("backgroundColor", "yellow");
+
+         //$("div p:contains('Swapnil')").css("backgroundColor", "red");
+
+         //$("div:has(p)").css("backgroundColor", "red");
+
+         //$("td:empty").css("backgroundColor", "green");
+
+         //$("span:parent").css("backgroundColor", "green");
+
+         //$(":button").css("backgroundColor", "red");
+
+         //$(":checkbox").wrap("<span> </span>").parent().css("backgroundColor", "red");
+         //$(":checked").wrap("<span> </span>").parent().css("backgroundColor", "red");
+
+         //alert($("input:disabled").length);
+         //alert($("input:enabled").length);
+
+       });
+
+     });
+
+     //var boxText = $("#box option:selected").text(); // get the text
+     //$('p').text(boxText);   // place the boxText in a paragraph
+
+     //$("div > p").css("backgroundColor", "red");
+     //$("div p").css("backgroundColor", "green");
+     //$("tr td").css("backgroundColor", "green");
+     $("p + span").css("backgroundColor", "green");
+     //$("p ~ span").css("backgroundColor", "red");
+
+
+     //$("p:target").css("backgroundColor", "red");
+
+   </script>
+
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>jQuery Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.2.1.js"> </script>
+
+    <style>
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="varType"> </div>
+
+
+
+
+
+    <script>
+
+      var myArray = [obj1 = undefined, obj2 = null, obj3 = new Array(), obj4= false,
+                      obj5 = new Number, obj6 = function(){}, obj7 = new RegExp, obj8 = new String,
+                      obj9 = new Array(["amit", "swapnil"])
+                    ];
+
+      $(document).ready(function(){
+        for (var i = 0; i < myArray.length ; i++){
+          $("#varType").append("The internal [[class]] of object-" + i + " is " + $.type(myArray[i])+ "<br>");
+        }
+      });
+
+      alert($.isEmptyObject( obj9));
+
+
+    </script>
+
+  </body>
+
+</html>
